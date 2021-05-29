@@ -1,0 +1,90 @@
+.hero {
+	min-height: 500px;
+	height: 100vh;
+	max-height: 1024px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.logo,
+	.tagline {
+		color: #fff;
+		height: 80px;
+		@media (min-width: 768px) {
+			height: 120px;
+		}
+	}
+	.tagline {
+		font-family: "Germania One", cursive;
+		text-align: center;
+		transform: translateY(-30px);
+		h2 {
+			font-size: 4rem;
+			letter-spacing: 2px;
+			text-shadow: 4px 2px #77a9a8;
+		}
+		h3 {
+			font-size: 1rem;
+			@media (min-width: 360px) {
+				font-size: 1.125rem;
+			}
+			letter-spacing: 1px;
+			white-space: nowrap;
+		}
+	}
+	.pond {
+		height: min(100%, 120vw);
+		width: min(100%, 100vh);
+		margin: 0 auto;
+		position: relative;
+	}
+	.lotus {
+		overflow: visible;
+		@include pos-center;
+		// width: min(55%, 350px);
+		height: 400px;
+		z-index: 1;
+		@media (orientation: landscape) {
+			width: auto;
+			// height: min(55%, 350px);
+		}
+		#lotus,
+		#lotus-waves {
+			transform-origin: center;
+		}
+	}
+	// .leave {
+	// 	position: absolute;
+	// 	width: min(45%, 360px);
+	// 	@media (orientation: landscape) {
+	// 		width: auto;
+	// 		height: min(40%, 360px);
+	// 	}
+	// 	&:nth-of-type(1) {
+	// 		top: 0%;
+	// 		left: 0%;
+	// 	}
+	// 	&:nth-of-type(2) {
+	// 		top: 10%;
+	// 		right: 0%;
+	// 		@media (orientation: landscape) {
+	// 			right: 5%;
+	// 		}
+	// 		transform: rotate(45deg);
+	// 	}
+	// 	&:nth-of-type(3) {
+	// 		bottom: 10%;
+	// 		left: 0%;
+	// 		@media (orientation: landscape) {
+	// 			left: 5%;
+	// 		}
+	// 		transform: rotate(90deg);
+	// 	}
+	// 	&:nth-of-type(4) {
+	// 		bottom: 0%;
+	// 		right: 0%;
+	// 		transform: rotate(135deg);
+	// 	}
+	// }
+}

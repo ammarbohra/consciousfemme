@@ -1,0 +1,30 @@
+@mixin pos($type, $t: null, $r: null, $b: null, $l: null, $x: null, $y: null) {
+	position: $type;
+	top: $t;
+	right: $r;
+	bottom: $b;
+	left: $l;
+	transform: translate($x, $y);
+}
+@mixin pos-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin flex($dir: null, $jc: null, $ai: null) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: $jc;
+	align-items: $ai;
+}
+@mixin flex-center($dir: null) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: center;
+	align-items: center;
+}
+@mixin size($height, $width: $height) {
+	height: $height;
+	width: $width;
+}
